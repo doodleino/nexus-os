@@ -1,0 +1,7 @@
+interface:
+  display_name: "NEXUS-OS"
+  short_description: "Repo workflows and conventions for NEXUS-OS"
+  brand_color: "#00F0FF"
+  default_prompt: "Use $nexus-os to follow this repository's conventions and workflows."
+policy:
+  allow_implicit_invocation: true

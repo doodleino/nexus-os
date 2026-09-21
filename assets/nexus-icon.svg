@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">NEXUS-OS</title>
+  <defs>
+    <linearGradient id="nexusGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF"/>
+      <stop offset="100%" stop-color="#8A2BE2"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="#0A0E1A"/>
+  <!-- NEXUS hexagonal core / N logo -->
+  <path d="M34 94V34h14l26 36V34h16v60H76L50 58v36H34Z" fill="url(#nexusGrad)"/>
+</svg>

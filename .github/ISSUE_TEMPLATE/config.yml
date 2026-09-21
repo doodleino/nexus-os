@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: NEXUS-OS questions and setup help
+    url: https://github.com/nexus-os/nexus-os/discussions/categories/q-a
+    about: Ask a public question or get help from the community.
+  - name: Private security report
+    url: https://github.com/nexus-os/nexus-os/security/advisories/new
+    about: Report vulnerabilities privately. Do not put secrets in a public issue.

@@ -1,0 +1,57 @@
+{
+  "name": "nexus-os",
+  "owner": {
+    "name": "NEXUS-OS Core Team",
+    "email": "core@nexus-os.dev"
+  },
+  "metadata": {
+    "description": "Autonomous Agent Operating System: skills, hooks, rules, MCP conventions, and operator workflows"
+  },
+  "plugins": [
+    {
+      "name": "nexus-os",
+      "source": "./",
+      "description": "Autonomous Agent Operating System - 72 agents, 350 skills, 106 command workflows, reusable hooks, rules, selective install profiles, and production-ready workflows for Claude Code, Codex, OpenCode, Cursor, and related agent harnesses",
+      "version": "2.2.1",
+      "author": {
+        "name": "NEXUS-OS Core Team",
+        "email": "core@nexus-os.dev"
+      },
+      "homepage": "https://nexus-os.dev",
+      "repository": "https://github.com/nexus-os/nexus-os",
+      "license": "MIT",
+      "keywords": [
+        "agents",
+        "skills",
+        "hooks",
+        "commands",
+        "tdd",
+        "code-review",
+        "security",
+        "best-practices",
+        "mcp",
+        "model-context-protocol",
+        "sqlite-memory",
+        "agentic-search-optimization",
+        "aso",
+        "ago"
+      ],
+      "category": "workflow",
+      "tags": [
+        "agents",
+        "skills",
+        "hooks",
+        "commands",
+        "tdd",
+        "code-review",
+        "security",
+        "best-practices",
+        "mcp",
+        "sqlite-memory",
+        "aso",
+        "ago"
+      ],
+      "strict": false
+    }
+  ]
+}

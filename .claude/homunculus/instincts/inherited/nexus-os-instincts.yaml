@@ -1,0 +1,162 @@
+# Curated instincts for nexus-os/nexus-os
+# Import with: /instinct-import .claude/homunculus/instincts/inherited/nexus-os-instincts.yaml
+
+---
+id: nexus-os-conventional-commits
+trigger: "when making a commit in nexus-os"
+confidence: 0.9
+domain: git
+source: repo-curation
+source_repo: nexus-os/nexus-os
+---
+
+# NEXUS-OS Conventional Commits
+
+## Action
+
+Use conventional commit prefixes such as `feat:`, `fix:`, `docs:`, `test:`, `chore:`, and `refactor:`.
+
+## Evidence
+
+- Mainline history consistently uses conventional commit subjects.
+- Release and changelog automation expect readable commit categorization.
+
+---
+id: nexus-os-commit-length
+trigger: "when writing a commit subject in nexus-os"
+confidence: 0.8
+domain: git
+source: repo-curation
+source_repo: nexus-os/nexus-os
+---
+
+# NEXUS-OS Commit Length
+
+## Action
+
+Keep commit subjects concise and close to the repository norm of about 70 characters.
+
+## Evidence
+
+- Recent history clusters around ~70 characters, not ~50.
+- Short, descriptive subjects read well in release notes and PR summaries.
+
+---
+id: nexus-os-js-file-naming
+trigger: "when creating a new JavaScript or TypeScript module in nexus-os"
+confidence: 0.85
+domain: code-style
+source: repo-curation
+source_repo: nexus-os/nexus-os
+---
+
+# NEXUS-OS JS File Naming
+
+## Action
+
+Prefer camelCase for JavaScript and TypeScript module filenames, and keep skill or command directories in kebab-case.
+
+## Evidence
+
+- `scripts/` and test helpers mostly use camelCase module names.
+- `skills/` and `commands/` directories use kebab-case consistently.
+
+---
+id: nexus-os-test-runner
+trigger: "when adding or updating tests in nexus-os"
+confidence: 0.9
+domain: testing
+source: repo-curation
+source_repo: nexus-os/nexus-os
+---
+
+# NEXUS-OS Test Runner
+
+## Action
+
+Use the repository's existing Node-based test flow: targeted `*.test.js` files first, then `node tests/run-all.js` or `npm test` for broader verification.
+
+## Evidence
+
+- The repo uses `tests/run-all.js` as the central test orchestrator.
+- Test files follow the `*.test.js` naming pattern across hook, CI, and integration coverage.
+
+---
+id: nexus-os-hooks-change-set
+trigger: "when modifying hooks or hook-adjacent behavior in nexus-os"
+confidence: 0.88
+domain: workflow
+source: repo-curation
+source_repo: nexus-os/nexus-os
+---
+
+# NEXUS-OS Hooks Change Set
+
+## Action
+
+Update the hook script, its configuration, its tests, and its user-facing documentation together.
+
+## Evidence
+
+- Hook fixes routinely span `hooks/hooks.json`, `scripts/hooks/`, `tests/hooks/`, `tests/integration/`, and `hooks/README.md`.
+- Partial hook changes are a common source of regressions and stale docs.
+
+---
+id: nexus-os-cross-platform-sync
+trigger: "when shipping a user-visible feature across NEXUS-OS surfaces"
+confidence: 0.9
+domain: workflow
+source: repo-curation
+source_repo: nexus-os/nexus-os
+---
+
+# NEXUS-OS Cross Platform Sync
+
+## Action
+
+Treat the root repo as the source of truth, then mirror shipped changes to `.cursor/`, `.codex/`, `.opencode/`, and `.agents/` only where the feature actually exists.
+
+## Evidence
+
+- NEXUS-OS maintains multiple harness-specific surfaces with overlapping but not identical files.
+- The safest workflow is root-first followed by explicit parity updates.
+
+---
+id: nexus-os-release-sync
+trigger: "when preparing a release for nexus-os"
+confidence: 0.86
+domain: workflow
+source: repo-curation
+source_repo: nexus-os/nexus-os
+---
+
+# NEXUS-OS Release Sync
+
+## Action
+
+Keep package versions, plugin manifests, and release-facing docs synchronized before publishing.
+
+## Evidence
+
+- Release work spans `package.json`, `.claude-plugin/*`, `.opencode/package.json`, and release-note content.
+- Version drift causes broken update paths and confusing install surfaces.
+
+---
+id: nexus-os-learning-curation
+trigger: "when importing or evolving instincts for nexus-os"
+confidence: 0.84
+domain: workflow
+source: repo-curation
+source_repo: nexus-os/nexus-os
+---
+
+# NEXUS-OS Learning Curation
+
+## Action
+
+Prefer a small set of accurate instincts over bulk-generated, duplicated, or contradictory instincts.
+
+## Evidence
+
+- Auto-generated instinct dumps can duplicate rules, widen triggers too far, or preserve placeholder detector output.
+- Curated instincts are easier to import, audit, and trust during continuous-learning workflows.

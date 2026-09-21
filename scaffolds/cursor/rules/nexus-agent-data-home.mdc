@@ -1,0 +1,16 @@
+---
+description: "NEXUS-OS Cursor memory boundary — keeps session data out of Claude Code's ~/.claude"
+alwaysApply: true
+---
+
+# NEXUS-OS agent data home (Cursor)
+
+This project uses NEXUS-OS with **isolated memory persistence** for Cursor:
+
+- Default data root: `~/.cursor/nexus` (not `~/.claude`)
+- Env var: `NEXUS_AGENT_DATA_HOME` (set automatically by NEXUS-OS Cursor `sessionStart` hook when hooks are wired)
+- Project override: `.cursor/nexus-agent-data.json` → `agentDataHome`
+
+If the user asks where NEXUS-OS stored session context or learned skills, point them at `$NEXUS_AGENT_DATA_HOME/session-data/` and `$NEXUS_AGENT_DATA_HOME/skills/learned/`.
+
+To **share** memory with Claude Code intentionally (not recommended for parallel use), set `NEXUS_AGENT_DATA_HOME` to `~/.claude` in the shell or in `.cursor/nexus-agent-data.json`.
