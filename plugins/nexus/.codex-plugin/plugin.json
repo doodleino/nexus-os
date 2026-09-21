@@ -1,0 +1,49 @@
+{
+  "name": "nexus-os",
+  "version": "2.2.1",
+  "description": "Autonomous Agent Operating System for Codex: shared skills, production-ready MCP configs, and selective-install-aligned conventions for TDD, security scanning, code review, and autonomous development.",
+  "author": {
+    "name": "NEXUS-OS Core Team",
+    "email": "core@nexus-os.dev",
+    "url": "https://nexus-os.dev"
+  },
+  "homepage": "https://nexus-os.dev",
+  "repository": "https://github.com/nexus-os/nexus-os",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "agents",
+    "skills",
+    "tdd",
+    "code-review",
+    "security",
+    "workflow",
+    "automation"
+  ],
+  "skills": "../../skills/",
+  "mcpServers": "../../.mcp.json",
+  "interface": {
+    "displayName": "NEXUS-OS",
+    "shortDescription": "292 NEXUS-OS skills plus MCP configs for TDD, security, code review, and autonomous development.",
+    "longDescription": "NEXUS-OS is an Autonomous Agent Operating System for Codex and adjacent agent harnesses. It packages reusable skills, MCP configs, TDD workflows, security scanning, code review, architecture decisions, operator workflows, and release gates in one installable plugin.",
+    "developerName": "NEXUS-OS Core Team",
+    "category": "Coding",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://nexus-os.dev",
+    "privacyPolicyURL": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+    "termsOfServiceURL": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
+    "brandColor": "#00F0FF",
+    "composerIcon": "../../assets/nexus-icon.svg",
+    "logo": "../../assets/hero.png",
+    "screenshots": [],
+    "defaultPrompt": [
+      "Use the tdd-workflow skill to write tests before implementation.",
+      "Use the security-review skill to scan for OWASP Top 10 vulnerabilities.",
+      "Use the verification-loop skill to verify correctness before shipping changes."
+    ]
+  }
+}

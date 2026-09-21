@@ -1,0 +1,52 @@
+# Migrating From NEXUS-OS 1.x (nexus-os) To 2.0
+
+NEXUS-OS 2.0 renamed the repo (`nexus-os/nexus-os` → `nexus-os/nexus-os`) and the plugin identifier (`nexus-os@nexus-os` → `nexus-os@nexus-os`). If you installed 1.x, follow this guide to upgrade cleanly. See also the [Naming + Migration Note](../README.md#naming--migration-note) in the README.
+
+## TL;DR
+
+```bash
+# 1. Install 2.0
+/plugin marketplace add https://github.com/nexus-os/nexus-os
+/plugin install nexus-os@nexus-os
+
+# 2. Remove the old plugin
+/plugin uninstall nexus-os@nexus-os
+```
+
+Then remove any leftover 1.x folders (see below) and restart the session.
+
+## "I now see two NEXUS-OS plugins"
+
+Expected. `nexus-os@nexus-os` and `nexus-os@nexus-os` are treated as separate plugins by Claude Code. Uninstall the old one; keep only `nexus-os@nexus-os`. Running both duplicates skills, commands, and hook executions.
+
+## Leftover folders after uninstalling 1.x
+
+`/plugin uninstall` removes the plugin from the active list, but can leave the old directory in the Claude plugin cache and any manual copies in your home directory.
+
+Safe to delete after the old plugin no longer appears in `/plugin` list:
+
+- The old plugin folder under the Claude plugins directory (e.g. `~/.claude/plugins/...nexus-os...`)
+- A 1.x manual install in your home folder (a cloned `nexus-os/` directory), **if** you are not using it as a working checkout
+- Old manually-copied surfaces under `~/.claude/` (`skills/`, `commands/`, `agents/` entries that came from 1.x) — the 2.0 plugin provides current versions
+
+Do NOT delete `~/.claude/rules/` content you copied intentionally, or personal memory/state files.
+
+## Does removing 1.x affect my existing projects?
+
+No. NEXUS-OS is a harness layer: skills, commands, agents, hooks. It does not alter your project code or git history. Everything NEXUS-OS produced in your repos (commits, files, PRs) is untouched. Your next session simply loads 2.0 surfaces instead of 1.x ones. Slash-command namespaces are `/nexus:*`.
+
+## One install path only
+
+Do not stack the plugin install with the manual installer (`install.sh` / `install.ps1` / `npx nexus-os install --profile full`). Pick one path; stacking creates duplicate skills and duplicate hook runs. If you already stacked, see [Reset / Uninstall NEXUS-OS](../README.md#reset--uninstall-nexus-os).
+
+## Using 2.0 across harnesses (Codex, Antigravity/agy, OpenCode, Cursor)
+
+2.0 is cross-harness. Use the manual installer with a target:
+
+```bash
+npx nexus-os install --profile core --target codex      # Codex CLI
+npx nexus-os install --profile core --target opencode   # OpenCode
+npx nexus-os install --profile core --target cursor     # Cursor
+```
+
+Run `npx nexus-os consult "<what you need>" --target <harness>` to preview which components fit before installing. Harness-specific guides: [ANTIGRAVITY-GUIDE.md](./ANTIGRAVITY-GUIDE.md), [HERMES-SETUP.md](./HERMES-SETUP.md), [QWEN-GUIDE.md](./QWEN-GUIDE.md), [JOYCODE-GUIDE.md](./JOYCODE-GUIDE.md).

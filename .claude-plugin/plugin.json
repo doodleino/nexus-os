@@ -1,0 +1,55 @@
+{
+  "name": "nexus-os",
+  "version": "2.2.1",
+  "description": "Autonomous Agent Operating System - 72 agents, 350 skills, 106 command workflows, reusable hooks, rules, MCP conventions, and operator workflows for Claude Code plus adjacent agent harnesses",
+  "author": {
+    "name": "NEXUS-OS Core Team",
+    "url": "https://nexus-os.dev"
+  },
+  "homepage": "https://nexus-os.dev",
+  "repository": "https://github.com/nexus-os/nexus-os",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "agents",
+    "skills",
+    "hooks",
+    "rules",
+    "tdd",
+    "code-review",
+    "security",
+    "workflow",
+    "automation",
+    "best-practices",
+    "mcp",
+    "model-context-protocol",
+    "sqlite-memory",
+    "agentic-search-optimization",
+    "aso",
+    "ago",
+    "cursor",
+    "codex",
+    "opencode"
+  ],
+  "userConfig": {
+    "hooks_enabled": {
+      "type": "boolean",
+      "title": "Enable NEXUS-OS hooks",
+      "description": "Run NEXUS-OS's local lifecycle, quality, and safety automation. Disable this to keep skills and commands without local hook automation.",
+      "default": true
+    },
+    "hook_profile": {
+      "type": "string",
+      "title": "NEXUS-OS hook profile",
+      "description": "Choose minimal, standard, or strict. Invalid values safely fall back to standard.",
+      "default": "standard"
+    }
+  },
+  "mcpServers": {},
+  "skills": [
+    "./skills/"
+  ],
+  "commands": [
+    "./commands/"
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "$schema": "../schemas/hooks-metadata.schema.json",
+  "entries": {
+    "PreToolUse": [
+      {
+        "id": "pre:bash:dispatcher",
+        "description": "Consolidated Bash preflight dispatcher for quality, tmux, push, and GateGuard checks",
+        "fingerprint": "8c5cb8829dc6"
+      },
+      {
+        "id": "pre:powershell:gateguard-fact-force",
+        "description": "PowerShell fact-forcing gate: inspect destructive commands without running unrelated Bash-only preflight hooks",
+        "fingerprint": "9df5b3c21833"
+      },
+      {
+        "id": "pre:write:doc-file-warning",
+        "description": "Doc file warning: warn about non-standard documentation files (exit code 0; warns only)",
+        "fingerprint": "390d18307044"
+      },
+      {
+        "id": "pre:edit-write:suggest-compact",
+        "description": "Suggest manual compaction at logical intervals",
+        "fingerprint": "f58514b1df76"
+      },
+      {
+        "id": "pre:observe:continuous-learning",
+        "description": "Capture tool use observations for continuous learning",
+        "fingerprint": "a4740f399595"
+      },
+      {
+        "id": "pre:governance-capture",
+        "description": "Capture governance events (secrets, policy violations, approval requests). Enable with NEXUS_GOVERNANCE_CAPTURE=1",
+        "fingerprint": "8d1f848feb99"
+      },
+      {
+        "id": "pre:config-protection",
+        "description": "Block modifications to linter/formatter config files. Steers agent to fix code instead of weakening configs.",
+        "fingerprint": "4bcbfbbd8e14"
+      },
+      {
+        "id": "pre:mcp-health-check",
+        "description": "Check MCP server health before MCP tool execution and block unhealthy MCP calls",
+        "fingerprint": "0e98d6a6e777"
+      },
+      {
+        "id": "pre:edit-write:gateguard-fact-force",
+        "description": "Fact-forcing gate: block first Edit/Write/MultiEdit per file and demand investigation (importers, data schemas, user instruction) before allowing",
+        "fingerprint": "27449bf4db54"
+      }
+    ],
+    "PreCompact": [
+      {
+        "id": "pre:compact",
+        "description": "Save state before context compaction",
+        "fingerprint": "f900fd12581e"
+      }
+    ],
+    "SessionStart": [
+      {
+        "id": "session:start",
+        "description": "Load previous context and detect package manager on new session",
+        "fingerprint": "7079a235dea5"
+      },
+      {
+        "id": "session-start:plan-canvas-sessions",
+        "description": "Surface open Plan Canvas review sessions so a fresh session can resume the loop",
+        "fingerprint": "aa207a922009"
+      }
+    ],
+    "PostToolUse": [
+      {
+        "id": "post:dispatcher:sync",
+        "description": "Run synchronous PostToolUse hooks in one process while preserving per-hook controls",
+        "fingerprint": "715d115461b4"
+      },
+      {
+        "id": "post:dispatcher:async",
+        "description": "Run background PostToolUse hooks in one process while preserving per-hook controls",
+        "fingerprint": "3cf5158742ad"
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "id": "post:mcp-health-check",
+        "description": "Track failed MCP tool calls, mark unhealthy servers, and attempt reconnect",
+        "fingerprint": "c0ffa26ad250"
+      },
+      {
+        "id": "post:skill:track",
+        "description": "Record hard Skill tool failures for skill-health telemetry",
+        "fingerprint": "a6158d0dedc2"
+      }
+    ],
+    "Stop": [
+      {
+        "id": "stop:plan-canvas-pending",
+        "description": "Deliver undelivered Plan Canvas browser feedback before the agent stops",
+        "fingerprint": "487acf9dda65"
+      },
+      {
+        "id": "stop:format-typecheck",
+        "description": "Batch format (Biome/Prettier) and typecheck (tsc) all JS/TS files edited this response — runs once at Stop instead of after every Edit",
+        "fingerprint": "9109a4a81a34"
+      },
+      {
+        "id": "stop:check-console-log",
+        "description": "Check for console.log in modified files after each response",
+        "fingerprint": "71a1dc7610e8"
+      },
+      {
+        "id": "stop:session-end",
+        "description": "Persist session state after each response (Stop carries transcript_path)",
+        "fingerprint": "aa6dc5081758"
+      },
+      {
+        "id": "stop:evaluate-session",
+        "description": "Evaluate session for extractable patterns",
+        "fingerprint": "483fee44d787"
+      },
+      {
+        "id": "stop:cost-tracker",
+        "description": "Track token and cost metrics per session",
+        "fingerprint": "12640082b0f3"
+      },
+      {
+        "id": "stop:desktop-notify",
+        "description": "Send desktop notification (macOS/WSL) with task summary when Claude responds",
+        "fingerprint": "26b1970417be"
+      }
+    ],
+    "SessionEnd": [
+      {
+        "id": "session:end:marker",
+        "description": "Session end lifecycle marker (non-blocking)",
+        "fingerprint": "25c78c84db2a"
+      }
+    ]
+  }
+}
